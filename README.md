@@ -2,7 +2,7 @@
 
 This is my player controller for Assignment 02. It moves relative to the camera, jumps to a set height in metres, forgives jump presses that are a little early or a little late, falls faster than it rises, squashes when it lands, and has a camera that follows smoothly at any frame rate. I did it in three levels: Level 1, Level 3 and Level 4.
 
-- **Video:** [paste your video link here]
+- **Video:** https://drive.google.com/file/d/1dM7JelzRUf6HkK3sYr6XORPDaDEUvwYb/view?usp=sharing
 - **Input:** Legacy Input with Active Input Handling set to Both. Movement uses `Input.GetAxis("Horizontal")` and `("Vertical")`, jumping uses `Input.GetKeyDown(KeyCode.Space)`, and all of it is read in `Update`.
 - **Ground check:** `Physics.CheckSphere` at the player's feet, with only the Ground layer in the mask. The player isn't on that layer, so it can't detect itself. With the player selected there's a wire sphere gizmo that is green on the ground and red in the air.
 - **Camera:** exact smoothing with `1 - e^(-k·dt)` in `LateUpdate`, plus look-ahead from the player's velocity.
